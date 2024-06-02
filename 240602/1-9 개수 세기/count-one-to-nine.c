@@ -5,7 +5,7 @@ int main() {
     scanf("%d", &n);
     for (int i=0; i<n; i++){
         scanf("%d ", &arr[i]);
-        for (int j=1; j<9; j++){
+        for (int j=1; j<=9; j++){
             if (arr[i] == j) cnt[j-1] += 1;
         }
     }
