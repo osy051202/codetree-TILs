@@ -6,11 +6,13 @@ int main() {
     for (int i=0; i<n; i++){
         scanf("%d", &arr[i]);
     }
-    int max1 = arr[0];
+    int max1 = arr[0], idx;
     for (int i=0; i<n; i++){
-        if (arr[i] > max1) max1 = arr[i];
+        if (arr[i] > max1){
+            max1 = arr[i];
+        }
     }
-    int max2 = arr[0];
+    int max2 = arr[1];
     for (int i=0; i<n; i++){
         if (arr[i] > max2 && arr[i] < max1){
             max2 = arr[i];
