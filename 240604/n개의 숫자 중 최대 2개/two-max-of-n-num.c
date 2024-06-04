@@ -6,19 +6,17 @@ int main() {
     for (int i=0; i<n; i++){
         scanf("%d", &arr[i]);
     }
-    int max1 = arr[0], idx;
+    int temp;
     for (int i=0; i<n; i++){
-        if (arr[i] > max1){
-            max1 = arr[i];
+        for (int j=0; j<n; j++){
+            if (arr[i] > arr[j]){
+                temp = arr[i];
+                arr[i] = arr[j];
+                arr[j] = temp;
+            }
         }
     }
-    int max2 = arr[1];
-    for (int i=0; i<n; i++){
-        if (arr[i] > max2 && arr[i] < max1){
-            max2 = arr[i];
-        }
-    }
-    printf("%d %d", max1, max2);
+    printf("%d %d", arr[0], arr[1]);
     // 여기에 코드를 작성해주세요.
     return 0;
 }
