@@ -8,14 +8,14 @@ int main() {
         scanf("%d", &arr[i]);
         cnt[arr[i]] += 1;
     }
-    for (int i=n; i>=0; i--){
+    for (int i=1000; i>=0; i--){
         if (cnt[i] == 1){
             printf("%d", i);
             break;
         }
     }
     bool s = true;
-    for (int i=n; i>=0; i--){
+    for (int i=1000; i>=0; i--){
         if (cnt[i] == 1) s = false;
     }
     if (s == true) printf("-1");
