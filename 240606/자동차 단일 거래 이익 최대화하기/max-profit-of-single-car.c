@@ -2,9 +2,9 @@
 
 int main() {
     int n, arr[1000];
-    scanf("%d\n", &n);
+    scanf("%d", &n);
     for (int i=0; i<n; i++)
-        scanf("%d ", &arr[i]);
+        scanf("%d", &arr[i]);
     
     int min = arr[0], idx;
     for (int i=0; i<n; i++){
